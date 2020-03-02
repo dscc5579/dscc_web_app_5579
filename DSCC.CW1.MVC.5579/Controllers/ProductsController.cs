@@ -92,7 +92,7 @@ namespace DSCC.CW1.MVC._5579.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44315/api/product");
+                client.BaseAddress = new Uri("https://localhost:44315/api/product/" + product.Id);
                 var putTask = client.PutAsJsonAsync<Product>("product", product);
                 putTask.Wait();
                 var result = putTask.Result;
