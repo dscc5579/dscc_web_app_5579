@@ -5,11 +5,11 @@ files:
     destination: c:\temp\webapp_5579
 hooks:
   BeforeInstall:
-    - location: pwfiles\deletewebsite.ps1
+    - location: \deletewebsite.ps1
       timeout: 180
   AfterInstall:
-    - location: pwfiles\installwebsite.ps1
+    - location: \installwebsite.ps1
       timeout: 180
   ValidateService:
-    - location: pwfiles\valinstall.ps1
+    - location: \valinstall.ps1
       timeout: 30
